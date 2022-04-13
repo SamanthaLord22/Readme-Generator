@@ -1,21 +1,44 @@
+//Includes packages needed
 const fs = require('fs')
 const inquirer = require('inquirer');
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}`;
+function generateMarkdown(answers) {
+  let dataPage = `## reademe generator
+
+  ## title
+  ${answers.title}
+
+  ## description
+  ${answers.description}
+
+  ## install
+ ${answers.install}
+
+  ## use
+  ${answers.use}
+
+  ## contributions
+  ${answers.contributions}
+
+  ## test
+  ${answers.test}
+
+  ## license
+  ## https://img.shields.io/badge/license-Apache2.0-bule.svg
+  ${answers.license}
+
+  ## username
+  ${answers.username}
+
+  ## email
+  ${answers.email}
+`
+  console.log(dataPage)
+
+  fs.writeFile(`${answers.name} readme.md`, dataPage, (err) =>
+    err ? console.log(err) : console.log('success'));
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown
