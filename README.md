@@ -5,6 +5,7 @@ The questions ask for the title, description, install, how to use, contributions
 The user answers are then generated into text in a Readme.md file.
 
 Deployed live URL:
+https://samanthalord22.github.io/Readme-Generator/
 
 Link to Video of use:
 https://drive.google.com/file/d/1OA-2PmlA9eQJCeORtsxg0DGtoDG9SwCM/view?usp=sharing
